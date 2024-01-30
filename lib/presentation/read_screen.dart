@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ReadScreen extends StatefulWidget {
   const ReadScreen({super.key});
@@ -20,16 +21,24 @@ class _ReadScreenState extends State<ReadScreen> {
       body: SafeArea(
         child: Stack(
           children: [
+            Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: SvgPicture.asset(
+                  'assets/icons/lamp.svg',
+                  height: 140,
+                )),
             ValueListenableBuilder(
                 valueListenable: _switchNotifier,
                 builder: (context, lightOn, child) {
                   return Positioned(
-                    top: 0,
+                    top: 115,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: lightOn ? MediaQuery.of(context).size.height : 0,
                       padding:
-                          const EdgeInsets.only(top: 200, left: 20, right: 20),
+                          const EdgeInsets.only(top: 140, left: 20, right: 20),
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
                               begin: Alignment.topCenter,
