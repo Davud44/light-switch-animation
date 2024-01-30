@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:light_switch/presentation/read_screen.dart';
 
-import 'presentation/light-switch-screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LightSwitchScreen(),
+      home: const ReadScreen(),
     );
   }
 }
